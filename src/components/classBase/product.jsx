@@ -2,11 +2,25 @@ import { Component } from "react";
 import ProductsContext from "../../context/products";
 
 export class Product extends Component {
+  constructor(props) {
+    super(props);
+    console.log("Product - Constructor");
+  }
+  componentDidMount() {
+    console.log("Product - componentDidMount");
+  }
+  componentDidUpdate() {
+    console.log("Product - componentDidUpdate");
+  }
+  componentWillUnmount() {
+    console.log("Product - componentWillUnmount");
+  }
   static contextType = ProductsContext;
   state = {
     imgUrl: "https://picsum.photos/200",
   };
   render() {
+    console.log("Product - render");
     return (
       <div>
         <span className="m-2 text-info">{this.props.onName}</span>

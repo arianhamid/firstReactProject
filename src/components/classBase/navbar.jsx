@@ -3,7 +3,18 @@ import ProductContext from "../../context/products";
 
 export default class Navbar extends Component {
   static contextType = ProductContext;
+  constructor(props) {
+    super(props);
+    console.log("Navbar - Constructor");
+  }
+  componentDidMount() {
+    console.log("Navbar - componentDidMount");
+  }
+  componentDidUpdate() {
+    console.log("Navbar - componentDidUpdate");
+  }
   render() {
+    console.log("Navbar - render");
     return (
       <nav className="navbar navbar-light bg-light">
         <div className="container-fluid">

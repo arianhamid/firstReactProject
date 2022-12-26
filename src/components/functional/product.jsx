@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import ProductsContext from "../../context/products";
 
 export default function Product({ onName, onCount, children, onId }) {
@@ -10,7 +10,11 @@ export default function Product({ onName, onCount, children, onId }) {
       return onCount;
     }
   }
-
+  useEffect(() => {
+    return () => {
+      console.log("Product - Delete");
+    };
+  });
   return (
     <div>
       <span className="m-2 text-info">{onName}</span>

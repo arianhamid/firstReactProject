@@ -4,6 +4,13 @@ import Products from "./components/classBase/products";
 import ProductsContext from "./context/products";
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+    console.log("App - Constructor");
+  }
+  componentDidMount() {
+    console.log("App - componentDidMount");
+  }
   state = {
     products: [
       { id: 1, productName: "laptop", count: 3 },
@@ -11,7 +18,11 @@ export default class App extends Component {
       { id: 3, productName: "airpods", count: 7 },
     ],
   };
+  componentDidUpdate() {
+    console.log("app - componentDidUpdate");
+  }
   render() {
+    console.log("App render");
     return (
       <>
         <ProductsContext.Provider

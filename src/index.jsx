@@ -2,9 +2,9 @@
 // import Products from "./components/products";
 // import Product from "./components/functional/product";
 // import Products from "./components/functional/products";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import App from "./app classBase";
-import App from "./app functionBase";
-
-ReactDOM.render(<App />, document.getElementById("root"));
+import App from "./app classBase";
+// import App from "./app functionBase";
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
