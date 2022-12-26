@@ -1,6 +1,6 @@
 import Products from "./components/functional/products";
 import Navbar from "./components/functional/navbar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProductsContext from "./context/products";
 
 export default function App() {
@@ -9,7 +9,12 @@ export default function App() {
     { id: 2, productName: "phone", count: 13 },
     { id: 3, productName: "airpods", count: 20 },
   ]);
-
+  useEffect(() => {
+    console.log("app - useeffect");
+  });
+  useEffect(() => {
+    console.log("app - useeffect2");
+  }, []);
   return (
     <>
       {
